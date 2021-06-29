@@ -1,0 +1,823 @@
+define(['dart_sdk', 'packages/flutter/src/material/app.dart', 'packages/flutter/src/material/icon_button.dart', 'packages/flutter/src/material/colors.dart', 'packages/flutter/src/widgets/widget_span.dart', 'packages/math_expressions/math_expressions.dart', 'packages/flutter/src/painting/rounded_rectangle_border.dart', 'packages/flutter/src/painting/border_radius.dart', 'packages/flutter/src/painting/borders.dart', 'packages/flutter/src/painting/edge_insets.dart', 'packages/flutter/src/painting/strut_style.dart', 'packages/flutter/src/painting/alignment.dart', 'packages/flutter/src/rendering/flex.dart'], (function load__packages__calculater__main_dart(dart_sdk, packages__flutter__src__material__app$46dart, packages__flutter__src__material__icon_button$46dart, packages__flutter__src__material__colors$46dart, packages__flutter__src__widgets__widget_span$46dart, packages__math_expressions__math_expressions$46dart, packages__flutter__src__painting__rounded_rectangle_border$46dart, packages__flutter__src__painting__border_radius$46dart, packages__flutter__src__painting__borders$46dart, packages__flutter__src__painting__edge_insets$46dart, packages__flutter__src__painting__strut_style$46dart, packages__flutter__src__painting__alignment$46dart, packages__flutter__src__rendering__flex$46dart) {
+  'use strict';
+  const core = dart_sdk.core;
+  const ui = dart_sdk.ui;
+  const _interceptors = dart_sdk._interceptors;
+  const dart = dart_sdk.dart;
+  const dartx = dart_sdk.dartx;
+  const app = packages__flutter__src__material__app$46dart.src__material__app;
+  const theme_data = packages__flutter__src__material__icon_button$46dart.src__material__theme_data;
+  const flat_button = packages__flutter__src__material__icon_button$46dart.src__material__flat_button;
+  const scaffold = packages__flutter__src__material__icon_button$46dart.src__material__scaffold;
+  const app_bar = packages__flutter__src__material__icon_button$46dart.src__material__app_bar;
+  const divider = packages__flutter__src__material__icon_button$46dart.src__material__divider;
+  const colors = packages__flutter__src__material__colors$46dart.src__material__colors;
+  const widget_inspector = packages__flutter__src__widgets__widget_span$46dart.src__widgets__widget_inspector;
+  const framework = packages__flutter__src__widgets__widget_span$46dart.src__widgets__framework;
+  const container = packages__flutter__src__widgets__widget_span$46dart.src__widgets__container;
+  const media_query = packages__flutter__src__widgets__widget_span$46dart.src__widgets__media_query;
+  const text = packages__flutter__src__widgets__widget_span$46dart.src__widgets__text;
+  const basic = packages__flutter__src__widgets__widget_span$46dart.src__widgets__basic;
+  const table = packages__flutter__src__widgets__widget_span$46dart.src__widgets__table;
+  const binding = packages__flutter__src__widgets__widget_span$46dart.src__widgets__binding;
+  const math_expressions = packages__math_expressions__math_expressions$46dart.math_expressions;
+  const rounded_rectangle_border = packages__flutter__src__painting__rounded_rectangle_border$46dart.src__painting__rounded_rectangle_border;
+  const border_radius = packages__flutter__src__painting__border_radius$46dart.src__painting__border_radius;
+  const borders = packages__flutter__src__painting__borders$46dart.src__painting__borders;
+  const edge_insets = packages__flutter__src__painting__edge_insets$46dart.src__painting__edge_insets;
+  const text_style = packages__flutter__src__painting__strut_style$46dart.src__painting__text_style;
+  const alignment = packages__flutter__src__painting__alignment$46dart.src__painting__alignment;
+  const flex = packages__flutter__src__rendering__flex$46dart.src__rendering__flex;
+  var main = Object.create(dart.library);
+  var $substring = dartx.substring;
+  var $replaceAll = dartx.replaceAll;
+  dart._checkModuleNullSafetyMode(false);
+  var T = {
+    _LocationL: () => (T._LocationL = dart.constFn(dart.legacy(widget_inspector._Location)))(),
+    VoidToNull: () => (T.VoidToNull = dart.constFn(dart.fnType(core.Null, [])))(),
+    VoidTodynamic: () => (T.VoidTodynamic = dart.constFn(dart.fnType(dart.dynamic, [])))(),
+    WidgetL: () => (T.WidgetL = dart.constFn(dart.legacy(framework.Widget)))(),
+    JSArrayOfWidgetL: () => (T.JSArrayOfWidgetL = dart.constFn(_interceptors.JSArray$(T.WidgetL())))(),
+    TableRowL: () => (T.TableRowL = dart.constFn(dart.legacy(table.TableRow)))(),
+    JSArrayOfTableRowL: () => (T.JSArrayOfTableRowL = dart.constFn(_interceptors.JSArray$(T.TableRowL())))()
+  };
+  var T$Eval = Object.assign({
+    _: () => T$Eval
+  }, T);
+  var S = {
+    _: () => S
+  };
+  var S$Eval = Object.assign({
+    _: () => S$Eval
+  }, S);
+  const CT = Object.create({
+    _: () => (C, CT)
+  });
+  dart.defineLazy(CT, {
+    get C1() {
+      return C[1] = dart.constList([], T._LocationL());
+    },
+    get C0() {
+      return C[0] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[1] || CT.C1,
+        [_Location_name]: null,
+        [_Location_column]: 13,
+        [_Location_line]: 14,
+        [_Location_file]: "file:///C:/Users/ashwa/AndroidStudioProjects/calculater/lib/main.dart"
+      });
+    },
+    get C4() {
+      return C[4] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "debugShowCheckedModeBanner",
+        [_Location_column]: 7,
+        [_Location_line]: 11,
+        [_Location_file]: null
+      });
+    },
+    get C5() {
+      return C[5] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "title",
+        [_Location_column]: 7,
+        [_Location_line]: 12,
+        [_Location_file]: null
+      });
+    },
+    get C6() {
+      return C[6] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "theme",
+        [_Location_column]: 7,
+        [_Location_line]: 13,
+        [_Location_file]: null
+      });
+    },
+    get C7() {
+      return C[7] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "home",
+        [_Location_column]: 7,
+        [_Location_line]: 14,
+        [_Location_file]: null
+      });
+    },
+    get C3() {
+      return C[3] = dart.constList([C[4] || CT.C4, C[5] || CT.C5, C[6] || CT.C6, C[7] || CT.C7], T._LocationL());
+    },
+    get C2() {
+      return C[2] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[3] || CT.C3,
+        [_Location_name]: null,
+        [_Location_column]: 12,
+        [_Location_line]: 10,
+        [_Location_file]: "file:///C:/Users/ashwa/AndroidStudioProjects/calculater/lib/main.dart"
+      });
+    },
+    get C10() {
+      return C[10] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "data",
+        [_Location_column]: 11,
+        [_Location_line]: 104,
+        [_Location_file]: null
+      });
+    },
+    get C11() {
+      return C[11] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "style",
+        [_Location_column]: 11,
+        [_Location_line]: 105,
+        [_Location_file]: null
+      });
+    },
+    get C9() {
+      return C[9] = dart.constList([C[10] || CT.C10, C[11] || CT.C11], T._LocationL());
+    },
+    get C8() {
+      return C[8] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[9] || CT.C9,
+        [_Location_name]: null,
+        [_Location_column]: 16,
+        [_Location_line]: 103,
+        [_Location_file]: "file:///C:/Users/ashwa/AndroidStudioProjects/calculater/lib/main.dart"
+      });
+    },
+    get C14() {
+      return C[14] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "shape",
+        [_Location_column]: 9,
+        [_Location_line]: 94,
+        [_Location_file]: null
+      });
+    },
+    get C15() {
+      return C[15] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "padding",
+        [_Location_column]: 9,
+        [_Location_line]: 101,
+        [_Location_file]: null
+      });
+    },
+    get C16() {
+      return C[16] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "onPressed",
+        [_Location_column]: 9,
+        [_Location_line]: 102,
+        [_Location_file]: null
+      });
+    },
+    get C17() {
+      return C[17] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 9,
+        [_Location_line]: 103,
+        [_Location_file]: null
+      });
+    },
+    get C13() {
+      return C[13] = dart.constList([C[14] || CT.C14, C[15] || CT.C15, C[16] || CT.C16, C[17] || CT.C17], T._LocationL());
+    },
+    get C12() {
+      return C[12] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[13] || CT.C13,
+        [_Location_name]: null,
+        [_Location_column]: 14,
+        [_Location_line]: 93,
+        [_Location_file]: "file:///C:/Users/ashwa/AndroidStudioProjects/calculater/lib/main.dart"
+      });
+    },
+    get C20() {
+      return C[20] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "height",
+        [_Location_column]: 7,
+        [_Location_line]: 91,
+        [_Location_file]: null
+      });
+    },
+    get C21() {
+      return C[21] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "color",
+        [_Location_column]: 7,
+        [_Location_line]: 92,
+        [_Location_file]: null
+      });
+    },
+    get C22() {
+      return C[22] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 7,
+        [_Location_line]: 93,
+        [_Location_file]: null
+      });
+    },
+    get C19() {
+      return C[19] = dart.constList([C[20] || CT.C20, C[21] || CT.C21, C[22] || CT.C22], T._LocationL());
+    },
+    get C18() {
+      return C[18] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[19] || CT.C19,
+        [_Location_name]: null,
+        [_Location_column]: 12,
+        [_Location_line]: 89,
+        [_Location_file]: "file:///C:/Users/ashwa/AndroidStudioProjects/calculater/lib/main.dart"
+      });
+    },
+    get C25() {
+      return C[25] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "data",
+        [_Location_column]: 34,
+        [_Location_line]: 119,
+        [_Location_file]: null
+      });
+    },
+    get C24() {
+      return C[24] = dart.constList([C[25] || CT.C25], T._LocationL());
+    },
+    get C23() {
+      return C[23] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[24] || CT.C24,
+        [_Location_name]: null,
+        [_Location_column]: 29,
+        [_Location_line]: 119,
+        [_Location_file]: "file:///C:/Users/ashwa/AndroidStudioProjects/calculater/lib/main.dart"
+      });
+    },
+    get C28() {
+      return C[28] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "title",
+        [_Location_column]: 22,
+        [_Location_line]: 119,
+        [_Location_file]: null
+      });
+    },
+    get C27() {
+      return C[27] = dart.constList([C[28] || CT.C28], T._LocationL());
+    },
+    get C26() {
+      return C[26] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[27] || CT.C27,
+        [_Location_name]: null,
+        [_Location_column]: 15,
+        [_Location_line]: 119,
+        [_Location_file]: "file:///C:/Users/ashwa/AndroidStudioProjects/calculater/lib/main.dart"
+      });
+    },
+    get C31() {
+      return C[31] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "data",
+        [_Location_column]: 25,
+        [_Location_line]: 125,
+        [_Location_file]: null
+      });
+    },
+    get C32() {
+      return C[32] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "style",
+        [_Location_column]: 34,
+        [_Location_line]: 125,
+        [_Location_file]: null
+      });
+    },
+    get C30() {
+      return C[30] = dart.constList([C[31] || CT.C31, C[32] || CT.C32], T._LocationL());
+    },
+    get C29() {
+      return C[29] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[30] || CT.C30,
+        [_Location_name]: null,
+        [_Location_column]: 20,
+        [_Location_line]: 125,
+        [_Location_file]: "file:///C:/Users/ashwa/AndroidStudioProjects/calculater/lib/main.dart"
+      });
+    },
+    get C35() {
+      return C[35] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "alignment",
+        [_Location_column]: 13,
+        [_Location_line]: 123,
+        [_Location_file]: null
+      });
+    },
+    get C36() {
+      return C[36] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "padding",
+        [_Location_column]: 13,
+        [_Location_line]: 124,
+        [_Location_file]: null
+      });
+    },
+    get C37() {
+      return C[37] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 13,
+        [_Location_line]: 125,
+        [_Location_file]: null
+      });
+    },
+    get C34() {
+      return C[34] = dart.constList([C[35] || CT.C35, C[36] || CT.C36, C[37] || CT.C37], T._LocationL());
+    },
+    get C33() {
+      return C[33] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[34] || CT.C34,
+        [_Location_name]: null,
+        [_Location_column]: 11,
+        [_Location_line]: 122,
+        [_Location_file]: "file:///C:/Users/ashwa/AndroidStudioProjects/calculater/lib/main.dart"
+      });
+    },
+    get C40() {
+      return C[40] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "data",
+        [_Location_column]: 25,
+        [_Location_line]: 130,
+        [_Location_file]: null
+      });
+    },
+    get C41() {
+      return C[41] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "style",
+        [_Location_column]: 32,
+        [_Location_line]: 130,
+        [_Location_file]: null
+      });
+    },
+    get C39() {
+      return C[39] = dart.constList([C[40] || CT.C40, C[41] || CT.C41], T._LocationL());
+    },
+    get C38() {
+      return C[38] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[39] || CT.C39,
+        [_Location_name]: null,
+        [_Location_column]: 20,
+        [_Location_line]: 130,
+        [_Location_file]: "file:///C:/Users/ashwa/AndroidStudioProjects/calculater/lib/main.dart"
+      });
+    },
+    get C44() {
+      return C[44] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "alignment",
+        [_Location_column]: 13,
+        [_Location_line]: 128,
+        [_Location_file]: null
+      });
+    },
+    get C45() {
+      return C[45] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "padding",
+        [_Location_column]: 13,
+        [_Location_line]: 129,
+        [_Location_file]: null
+      });
+    },
+    get C46() {
+      return C[46] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 13,
+        [_Location_line]: 130,
+        [_Location_file]: null
+      });
+    },
+    get C43() {
+      return C[43] = dart.constList([C[44] || CT.C44, C[45] || CT.C45, C[46] || CT.C46], T._LocationL());
+    },
+    get C42() {
+      return C[42] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[43] || CT.C43,
+        [_Location_name]: null,
+        [_Location_column]: 11,
+        [_Location_line]: 127,
+        [_Location_file]: "file:///C:/Users/ashwa/AndroidStudioProjects/calculater/lib/main.dart"
+      });
+    },
+    get C47() {
+      return C[47] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[1] || CT.C1,
+        [_Location_name]: null,
+        [_Location_column]: 22,
+        [_Location_line]: 133,
+        [_Location_file]: "file:///C:/Users/ashwa/AndroidStudioProjects/calculater/lib/main.dart"
+      });
+    },
+    get C50() {
+      return C[50] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 15,
+        [_Location_line]: 133,
+        [_Location_file]: null
+      });
+    },
+    get C49() {
+      return C[49] = dart.constList([C[50] || CT.C50], T._LocationL());
+    },
+    get C48() {
+      return C[48] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[49] || CT.C49,
+        [_Location_name]: null,
+        [_Location_column]: 11,
+        [_Location_line]: 132,
+        [_Location_file]: "file:///C:/Users/ashwa/AndroidStudioProjects/calculater/lib/main.dart"
+      });
+    },
+    get C53() {
+      return C[53] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "children",
+        [_Location_column]: 19,
+        [_Location_line]: 141,
+        [_Location_file]: null
+      });
+    },
+    get C52() {
+      return C[52] = dart.constList([C[53] || CT.C53], T._LocationL());
+    },
+    get C51() {
+      return C[51] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[52] || CT.C52,
+        [_Location_name]: null,
+        [_Location_column]: 24,
+        [_Location_line]: 140,
+        [_Location_file]: "file:///C:/Users/ashwa/AndroidStudioProjects/calculater/lib/main.dart"
+      });
+    },
+    get C56() {
+      return C[56] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "width",
+        [_Location_column]: 17,
+        [_Location_line]: 139,
+        [_Location_file]: null
+      });
+    },
+    get C57() {
+      return C[57] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 17,
+        [_Location_line]: 140,
+        [_Location_file]: null
+      });
+    },
+    get C55() {
+      return C[55] = dart.constList([C[56] || CT.C56, C[57] || CT.C57], T._LocationL());
+    },
+    get C54() {
+      return C[54] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[55] || CT.C55,
+        [_Location_name]: null,
+        [_Location_column]: 15,
+        [_Location_line]: 138,
+        [_Location_file]: "file:///C:/Users/ashwa/AndroidStudioProjects/calculater/lib/main.dart"
+      });
+    },
+    get C60() {
+      return C[60] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "children",
+        [_Location_column]: 19,
+        [_Location_line]: 189,
+        [_Location_file]: null
+      });
+    },
+    get C59() {
+      return C[59] = dart.constList([C[60] || CT.C60], T._LocationL());
+    },
+    get C58() {
+      return C[58] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[59] || CT.C59,
+        [_Location_name]: null,
+        [_Location_column]: 24,
+        [_Location_line]: 188,
+        [_Location_file]: "file:///C:/Users/ashwa/AndroidStudioProjects/calculater/lib/main.dart"
+      });
+    },
+    get C63() {
+      return C[63] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "width",
+        [_Location_column]: 21,
+        [_Location_line]: 187,
+        [_Location_file]: null
+      });
+    },
+    get C64() {
+      return C[64] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 17,
+        [_Location_line]: 188,
+        [_Location_file]: null
+      });
+    },
+    get C62() {
+      return C[62] = dart.constList([C[63] || CT.C63, C[64] || CT.C64], T._LocationL());
+    },
+    get C61() {
+      return C[61] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[62] || CT.C62,
+        [_Location_name]: null,
+        [_Location_column]: 15,
+        [_Location_line]: 186,
+        [_Location_file]: "file:///C:/Users/ashwa/AndroidStudioProjects/calculater/lib/main.dart"
+      });
+    },
+    get C67() {
+      return C[67] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "mainAxisAlignment",
+        [_Location_column]: 14,
+        [_Location_line]: 136,
+        [_Location_file]: null
+      });
+    },
+    get C68() {
+      return C[68] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "children",
+        [_Location_column]: 13,
+        [_Location_line]: 137,
+        [_Location_file]: null
+      });
+    },
+    get C66() {
+      return C[66] = dart.constList([C[67] || CT.C67, C[68] || CT.C68], T._LocationL());
+    },
+    get C65() {
+      return C[65] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[66] || CT.C66,
+        [_Location_name]: null,
+        [_Location_column]: 11,
+        [_Location_line]: 135,
+        [_Location_file]: "file:///C:/Users/ashwa/AndroidStudioProjects/calculater/lib/main.dart"
+      });
+    },
+    get C71() {
+      return C[71] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "children",
+        [_Location_column]: 9,
+        [_Location_line]: 121,
+        [_Location_file]: null
+      });
+    },
+    get C70() {
+      return C[70] = dart.constList([C[71] || CT.C71], T._LocationL());
+    },
+    get C69() {
+      return C[69] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[70] || CT.C70,
+        [_Location_name]: null,
+        [_Location_column]: 13,
+        [_Location_line]: 120,
+        [_Location_file]: "file:///C:/Users/ashwa/AndroidStudioProjects/calculater/lib/main.dart"
+      });
+    },
+    get C74() {
+      return C[74] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "appBar",
+        [_Location_column]: 7,
+        [_Location_line]: 119,
+        [_Location_file]: null
+      });
+    },
+    get C75() {
+      return C[75] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "body",
+        [_Location_column]: 7,
+        [_Location_line]: 120,
+        [_Location_file]: null
+      });
+    },
+    get C73() {
+      return C[73] = dart.constList([C[74] || CT.C74, C[75] || CT.C75], T._LocationL());
+    },
+    get C72() {
+      return C[72] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[73] || CT.C73,
+        [_Location_name]: null,
+        [_Location_column]: 12,
+        [_Location_line]: 118,
+        [_Location_file]: "file:///C:/Users/ashwa/AndroidStudioProjects/calculater/lib/main.dart"
+      });
+    },
+    get C76() {
+      return C[76] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[1] || CT.C1,
+        [_Location_name]: null,
+        [_Location_column]: 10,
+        [_Location_line]: 5,
+        [_Location_file]: "file:///C:/Users/ashwa/AndroidStudioProjects/calculater/lib/main.dart"
+      });
+    }
+  }, false);
+  var C = Array(77).fill(void 0);
+  var I = ["package:calculater/main.dart"];
+  var _Location_parameterLocations = dart.privateName(widget_inspector, "_Location.parameterLocations");
+  var _Location_name = dart.privateName(widget_inspector, "_Location.name");
+  var _Location_column = dart.privateName(widget_inspector, "_Location.column");
+  var _Location_line = dart.privateName(widget_inspector, "_Location.line");
+  var _Location_file = dart.privateName(widget_inspector, "_Location.file");
+  main.Calculator = class Calculator extends framework.StatelessWidget {
+    build(context) {
+      return new app.MaterialApp.new({debugShowCheckedModeBanner: false, title: "Calculator", theme: theme_data.ThemeData.new({primarySwatch: colors.Colors.red}), home: new main.SimpleCalculator.new({$creationLocationd_0dea112b090073317d4: C[0] || CT.C0}), $creationLocationd_0dea112b090073317d4: C[2] || CT.C2});
+    }
+  };
+  (main.Calculator.new = function(opts) {
+    let $36creationLocationd_0dea112b090073317d4 = opts && '$creationLocationd_0dea112b090073317d4' in opts ? opts.$creationLocationd_0dea112b090073317d4 : null;
+    main.Calculator.__proto__.new.call(this, {$creationLocationd_0dea112b090073317d4: $36creationLocationd_0dea112b090073317d4});
+    ;
+  }).prototype = main.Calculator.prototype;
+  dart.addTypeTests(main.Calculator);
+  dart.addTypeCaches(main.Calculator);
+  dart.setMethodSignature(main.Calculator, () => ({
+    __proto__: dart.getMethods(main.Calculator.__proto__),
+    build: dart.fnType(dart.legacy(framework.Widget), [dart.legacy(framework.BuildContext)])
+  }));
+  dart.setLibraryUri(main.Calculator, I[0]);
+  main.SimpleCalculator = class SimpleCalculator extends framework.StatefulWidget {
+    createState() {
+      return new main._SimpleCalculatorState.new();
+    }
+  };
+  (main.SimpleCalculator.new = function(opts) {
+    let $36creationLocationd_0dea112b090073317d4 = opts && '$creationLocationd_0dea112b090073317d4' in opts ? opts.$creationLocationd_0dea112b090073317d4 : null;
+    main.SimpleCalculator.__proto__.new.call(this, {$creationLocationd_0dea112b090073317d4: $36creationLocationd_0dea112b090073317d4});
+    ;
+  }).prototype = main.SimpleCalculator.prototype;
+  dart.addTypeTests(main.SimpleCalculator);
+  dart.addTypeCaches(main.SimpleCalculator);
+  dart.setMethodSignature(main.SimpleCalculator, () => ({
+    __proto__: dart.getMethods(main.SimpleCalculator.__proto__),
+    createState: dart.fnType(dart.legacy(main._SimpleCalculatorState), [])
+  }));
+  dart.setLibraryUri(main.SimpleCalculator, I[0]);
+  main._SimpleCalculatorState = class _SimpleCalculatorState extends framework.State$(dart.legacy(main.SimpleCalculator)) {
+    buttonPressed(buttonText) {
+      this.setState(dart.fn(() => {
+        if (buttonText === "C") {
+          this.equation = "0";
+          this.result = "0";
+          let equationFontSize = 38.0;
+          let resultFontSize = 48.0;
+        } else if (buttonText === "⌫") {
+          let equationFontSize = 48.0;
+          let resultFontSize = 38.0;
+          this.equation = this.equation[$substring](0, this.equation.length - 1);
+          if (this.equation === "") {
+            this.equation = "0";
+          }
+        } else if (buttonText === "=") {
+          let equationFontSize = 38.0;
+          let resultFontSize = 48.0;
+          this.expression = this.equation;
+          this.expression = this.expression[$replaceAll]("×", "*");
+          this.expression = this.expression[$replaceAll]("÷", "/");
+          try {
+            let p = new math_expressions.Parser.new();
+            let exp = p.parse(this.expression);
+            let cm = new math_expressions.ContextModel.new();
+            this.result = dart.str(exp.evaluate(math_expressions.EvaluationType.REAL, cm));
+          } catch (e$) {
+            let e = dart.getThrown(e$);
+            this.result = "error";
+          }
+        } else {
+          let equationFontSize = 48.0;
+          let resultFontSize = 38.0;
+          if (this.equation === "0") {
+            this.equation = buttonText;
+          } else {
+            this.equation = dart.notNull(this.equation) + dart.notNull(buttonText);
+          }
+        }
+      }, T.VoidToNull()));
+    }
+    buildButton(buttonText, buttonHeight, buttonColor) {
+      return new container.Container.new({height: dart.notNull(media_query.MediaQuery.of(this.context).size.height) * 0.1 * dart.notNull(buttonHeight), color: buttonColor, child: new flat_button.FlatButton.new({shape: new rounded_rectangle_border.RoundedRectangleBorder.new({borderRadius: new border_radius.BorderRadius.circular(0.0), side: new borders.BorderSide.new({color: colors.Colors.white, width: 1.0, style: borders.BorderStyle.solid})}), padding: new edge_insets.EdgeInsets.all(16.0), onPressed: dart.fn(() => this.buttonPressed(buttonText), T.VoidTodynamic()), child: new text.Text.new(buttonText, {style: new text_style.TextStyle.new({fontSize: 30.0, fontWeight: ui.FontWeight.normal, color: colors.Colors.white}), $creationLocationd_0dea112b090073317d4: C[8] || CT.C8}), $creationLocationd_0dea112b090073317d4: C[12] || CT.C12}), $creationLocationd_0dea112b090073317d4: C[18] || CT.C18});
+    }
+    build(context) {
+      return new scaffold.Scaffold.new({appBar: new app_bar.AppBar.new({title: new text.Text.new("Simple Calculator", {$creationLocationd_0dea112b090073317d4: C[23] || CT.C23}), $creationLocationd_0dea112b090073317d4: C[26] || CT.C26}), body: new basic.Column.new({children: T.JSArrayOfWidgetL().of([new container.Container.new({alignment: alignment.Alignment.centerRight, padding: new edge_insets.EdgeInsets.fromLTRB(10.0, 20.0, 10.0, 0.0), child: new text.Text.new(this.equation, {style: new text_style.TextStyle.new({fontSize: this.equationFontSize}), $creationLocationd_0dea112b090073317d4: C[29] || CT.C29}), $creationLocationd_0dea112b090073317d4: C[33] || CT.C33}), new container.Container.new({alignment: alignment.Alignment.centerRight, padding: new edge_insets.EdgeInsets.fromLTRB(10.0, 30.0, 10.0, 0.0), child: new text.Text.new(this.result, {style: new text_style.TextStyle.new({fontSize: this.resultFontSize}), $creationLocationd_0dea112b090073317d4: C[38] || CT.C38}), $creationLocationd_0dea112b090073317d4: C[42] || CT.C42}), new basic.Expanded.new({child: new divider.Divider.new({$creationLocationd_0dea112b090073317d4: C[47] || CT.C47}), $creationLocationd_0dea112b090073317d4: C[48] || CT.C48}), new basic.Row.new({mainAxisAlignment: flex.MainAxisAlignment.center, children: T.JSArrayOfWidgetL().of([new container.Container.new({width: dart.notNull(media_query.MediaQuery.of(context).size.width) * 0.75, child: new table.Table.new({children: T.JSArrayOfTableRowL().of([new table.TableRow.new({children: T.JSArrayOfWidgetL().of([this.buildButton("C", 1.0, colors.Colors.red), this.buildButton("⌫", 1.0, colors.Colors.blue), this.buildButton("÷", 1.0, colors.Colors.blue)])}), new table.TableRow.new({children: T.JSArrayOfWidgetL().of([this.buildButton("7", 1.0, colors.Colors.black87), this.buildButton("8", 1.0, colors.Colors.black87), this.buildButton("9", 1.0, colors.Colors.black87)])}), new table.TableRow.new({children: T.JSArrayOfWidgetL().of([this.buildButton("4", 1.0, colors.Colors.black87), this.buildButton("5", 1.0, colors.Colors.black87), this.buildButton("6", 1.0, colors.Colors.black87)])}), new table.TableRow.new({children: T.JSArrayOfWidgetL().of([this.buildButton("1", 1.0, colors.Colors.black87), this.buildButton("2", 1.0, colors.Colors.black87), this.buildButton("3", 1.0, colors.Colors.black87)])}), new table.TableRow.new({children: T.JSArrayOfWidgetL().of([this.buildButton(".", 1.0, colors.Colors.black87), this.buildButton("0", 1.0, colors.Colors.black87), this.buildButton("00", 1.0, colors.Colors.black87)])})]), $creationLocationd_0dea112b090073317d4: C[51] || CT.C51}), $creationLocationd_0dea112b090073317d4: C[54] || CT.C54}), new container.Container.new({width: dart.notNull(media_query.MediaQuery.of(context).size.width) * 0.25, child: new table.Table.new({children: T.JSArrayOfTableRowL().of([new table.TableRow.new({children: T.JSArrayOfWidgetL().of([this.buildButton("×", 1.0, colors.Colors.blue)])}), new table.TableRow.new({children: T.JSArrayOfWidgetL().of([this.buildButton("-", 1.0, colors.Colors.blue)])}), new table.TableRow.new({children: T.JSArrayOfWidgetL().of([this.buildButton("+", 1.0, colors.Colors.blue)])}), new table.TableRow.new({children: T.JSArrayOfWidgetL().of([this.buildButton("=", 2.0, colors.Colors.blue)])})]), $creationLocationd_0dea112b090073317d4: C[58] || CT.C58}), $creationLocationd_0dea112b090073317d4: C[61] || CT.C61})]), $creationLocationd_0dea112b090073317d4: C[65] || CT.C65})]), $creationLocationd_0dea112b090073317d4: C[69] || CT.C69}), $creationLocationd_0dea112b090073317d4: C[72] || CT.C72});
+    }
+  };
+  (main._SimpleCalculatorState.new = function() {
+    this.equation = "0";
+    this.result = "0";
+    this.expression = "";
+    this.equationFontSize = 38.0;
+    this.resultFontSize = 48.0;
+    main._SimpleCalculatorState.__proto__.new.call(this);
+    ;
+  }).prototype = main._SimpleCalculatorState.prototype;
+  dart.addTypeTests(main._SimpleCalculatorState);
+  dart.addTypeCaches(main._SimpleCalculatorState);
+  dart.setMethodSignature(main._SimpleCalculatorState, () => ({
+    __proto__: dart.getMethods(main._SimpleCalculatorState.__proto__),
+    buttonPressed: dart.fnType(dart.dynamic, [dart.legacy(core.String)]),
+    buildButton: dart.fnType(dart.legacy(framework.Widget), [dart.legacy(core.String), dart.legacy(core.double), dart.legacy(ui.Color)]),
+    build: dart.fnType(dart.legacy(framework.Widget), [dart.legacy(framework.BuildContext)])
+  }));
+  dart.setLibraryUri(main._SimpleCalculatorState, I[0]);
+  dart.setFieldSignature(main._SimpleCalculatorState, () => ({
+    __proto__: dart.getFields(main._SimpleCalculatorState.__proto__),
+    equation: dart.fieldType(dart.legacy(core.String)),
+    result: dart.fieldType(dart.legacy(core.String)),
+    expression: dart.fieldType(dart.legacy(core.String)),
+    equationFontSize: dart.fieldType(dart.legacy(core.double)),
+    resultFontSize: dart.fieldType(dart.legacy(core.double))
+  }));
+  main.main = function main$() {
+    binding.runApp(new main.Calculator.new({$creationLocationd_0dea112b090073317d4: C[76] || CT.C76}));
+  };
+  dart.trackLibraries("packages/calculater/main.dart", {
+    "package:calculater/main.dart": main
+  }, {
+  }, '{"version":3,"sourceRoot":"","sources":["main.dart"],"names":[],"mappings":"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","file":"../../../../../packages/calculater/main.dart.lib.js"}');
+  // Exports:
+  return {
+    main: main
+  };
+}));
+
+//# sourceMappingURL=main.dart.lib.js.map
